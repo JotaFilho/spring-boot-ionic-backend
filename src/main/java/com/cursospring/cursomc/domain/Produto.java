@@ -18,23 +18,20 @@ import jakarta.persistence.JoinColumn;
 @Entity
 public class Produto implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
 	private Double preco;
-	
+
 	@JsonBackReference // Evita loop infinito no JSON
 	@ManyToMany
-	@JoinTable(name = "PRODUTO_CATEGORIA", 
-	joinColumns = @JoinColumn(name = "produto_id"), 
-	inverseJoinColumns = @JoinColumn(name = "categoria_id")
-	)
+	@JoinTable(name = "PRODUTO_CATEGORIA", joinColumns = @JoinColumn(name = "produto_id"), inverseJoinColumns = @JoinColumn(name = "categoria_id"))
 	private List<Categoria> categorias = new ArrayList<>();
-	
+
 	public Produto() {
-		
+
 	}
 
 	public Produto(Integer id, String nome, Double preco) {
@@ -92,7 +89,5 @@ public class Produto implements Serializable {
 		Produto other = (Produto) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
+
 }
