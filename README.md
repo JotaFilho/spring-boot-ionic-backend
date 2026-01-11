@@ -68,4 +68,4 @@ JDBC URL: jdbc:h2:mem:testdb
 User: sa | Pass: (vazio)
 
 ✍️ Autor
-Desenvolvido por [Seu Nome] durante o curso do Prof. Nélio Alves.
+Desenvolvido por José Filho durante o curso do Prof. Nélio Alves.
