@@ -50,7 +50,7 @@ Clone o repositório:
 
 Bash
 
-git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/JotaFilho/cursomc/tree/main)
+git clone https://github.com/JotaFilho/cursomc/tree/main
 Importe no STS/Eclipse:
 
 File -> Import -> Existing Maven Projects.
